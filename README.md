@@ -4,7 +4,7 @@ https://ohmyposh.dev/
 
 # Sample screenshots
 
-- QFK
+- QFK  
   ![qfk](qfk.png)
-- QFK2
+- QFK2  
   ![qfk2](qfk2.png)
