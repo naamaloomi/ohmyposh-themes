@@ -13,7 +13,7 @@
         {
           "type": "session",
           "style": "powerline",
-          "template": "{{if .Root}} \uf0e7{{else}} \uf64f{{end}}",
+          "template": "{{if .Root}} \uf0e7{{else}} \uf64f {{end}}",
           "background": "#22669e",
           "foreground": "#ffffff",
           "properties": {
@@ -26,8 +26,7 @@
           "style": "powerline",
           "template": "{{ .CurrentDate | date .Format }} ",
           "background": "#22669e",
-          "foreground": "#ffffff",
-          "powerline_symbol": "\ue0b0"
+          "foreground": "#ffffff"
         },
         {
           "type": "executiontime",
@@ -35,7 +34,7 @@
           "template": " {{ .FormattedMs }} ",
           "background": "#19be92",
           "foreground": "#000000",
-          "powerline_symbol": "\uE0B0",
+          "powerline_symbol": "\ue0b0",
           "properties": {
             "always_enabled": true
           }
@@ -87,7 +86,7 @@
       "type": "prompt"
     }
   ],
-  "console_title_template": "{{if .Root}} \u26a1 {{end}}{{.UserName}} \u2794 📁{{.Folder}}",
+  "console_title_template": "{{if .Root}} \u26a1 {{end}}\u2659{{.UserName}}  🖿 {{.Folder}}",
   "final_space": true,
   "version": 2
 }
