@@ -13,7 +13,7 @@
         {
           "type": "session",
           "style": "powerline",
-          "template": "{{if .Root}} \uf0e7{{else}} \uf64f {{end}}",
+          "template": "{{if .Root}} \uf0e7 {{else}} \uf64f {{end}}",
           "background": "#22669e",
           "foreground": "#ffffff",
           "properties": {
