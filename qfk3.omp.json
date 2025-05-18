@@ -55,7 +55,7 @@
                     "trailing_diamond": "\ue0b0",
                     "properties": {
                         "cache_duration": "none",
-                        "folder_icon": "...",
+                        "folder_icon": "\uf115",
                         "folder_separator_icon": " \ue0bd ",
                         "style": "agnoster_short",
                         "home_icon": "\uf015"
