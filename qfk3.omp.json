@@ -104,7 +104,7 @@
                     "foreground": "#19be92",
                     "background": "#0b5541",
                     "leading_diamond": "\ue0b2",
-                    "trailing_diamond": "<transparent,#0b5541>\ue0b2</>",
+                    "trailing_diamond": "\u2560\u2557",
                     "template": " \uf520 {{ .FormattedMs }} ",
                     "properties": {
                         "always_enabled": true,
