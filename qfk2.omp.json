@@ -1,92 +1,105 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "console_title_template": "{{if .Root}} ⚡ {{end}}♙{{.UserName}}  🖿 {{.Folder}}",
   "blocks": [
     {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "type": "text",
-          "style": "plain",
-          "template": "\u2554\u2563",
-          "foreground": "#22669e"
-        },
-        {
-          "type": "session",
-          "style": "powerline",
-          "template": "{{if .Root}} \uf0e7 {{else}} \uf64f {{end}}",
-          "background": "#22669e",
-          "foreground": "#ffffff",
           "properties": {
-            "style": "folder",
-            "display_host": false
-          }
+            "cache_duration": "none"
+          },
+          "template": "\u2554\u2563",
+          "foreground": "#22669e",
+          "type": "text",
+          "style": "plain"
         },
         {
-          "type": "time",
-          "style": "powerline",
-          "template": "{{ .CurrentDate | date .Format }} ",
+          "properties": {
+            "cache_duration": "none",
+            "display_host": false,
+            "style": "folder"
+          },
+          "template": "{{if .Root}} \uf0e7 {{else}} \uf64f {{end}}",
+          "foreground": "#ffffff",
           "background": "#22669e",
-          "foreground": "#ffffff"
+          "type": "session",
+          "style": "powerline"
         },
         {
-          "type": "executiontime",
-          "style": "powerline",
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "{{ .CurrentDate | date .Format }} ",
+          "foreground": "#ffffff",
+          "background": "#22669e",
+          "type": "time",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "always_enabled": true,
+            "cache_duration": "none"
+          },
           "template": " {{ .FormattedMs }} ",
-          "background": "#19be92",
           "foreground": "#000000",
           "powerline_symbol": "\ue0b0",
-          "properties": {
-            "always_enabled": true
-          }
+          "background": "#19be92",
+          "type": "executiontime",
+          "style": "powerline"
         },
         {
-          "type": "path",
-          "style": "powerline",
-          "template": " \ue5ff {{ .Path }} ",
-          "background": "#7f0f96",
-          "foreground": "#ffffff",
-          "powerline_symbol": "\ue0b0",
           "properties": {
+            "cache_duration": "none",
             "folder_icon": "\uf115",
             "folder_separator_icon": " \ue0b1 ",
             "style": "folder"
-          }
+          },
+          "template": " \ue5ff {{ .Path }} ",
+          "foreground": "#ffffff",
+          "powerline_symbol": "\ue0b0",
+          "background": "#7f0f96",
+          "type": "path",
+          "style": "powerline"
         },
         {
-          "type": "git",
-          "style": "powerline",
-          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
-          "background": "#00d41c",
-          "foreground": "#193549",
-          "powerline_symbol": "\ue0b0",
           "properties": {
-            "cherry_pick_icon": "\u2713 ",
+            "cache_duration": "none",
+            "cherry_pick_icon": "✓ ",
             "commit_icon": "\u25b7 ",
             "fetch_status": true,
             "merge_icon": "\u25f4 ",
             "no_commits_icon": "[no commits]",
             "rebase_icon": "\u2c62 ",
             "tag_icon": "\u25b6 "
-          }
+          },
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
+          "foreground": "#193549",
+          "powerline_symbol": "\ue0b0",
+          "background": "#00d41c",
+          "type": "git",
+          "style": "powerline"
         }
-      ],
-      "type": "prompt"
+      ]
     },
     {
+      "type": "prompt",
       "alignment": "left",
-      "newline": true,
       "segments": [
         {
-          "style": "plain",
-          "foreground": "#22669e",
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": "\u255a\u2563\ue0b0",
-          "type": "text"
+          "foreground": "#22669e",
+          "type": "text",
+          "style": "plain"
         }
       ],
-      "type": "prompt"
+      "newline": true
     }
   ],
-  "console_title_template": "{{if .Root}} \u26a1 {{end}}\u2659{{.UserName}}  🖿 {{.Folder}}",
-  "final_space": true,
-  "version": 2
+  "version": 3,
+  "final_space": true
 }
