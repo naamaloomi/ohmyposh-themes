@@ -7,13 +7,13 @@
             "type": "prompt",
             "segments": [
                 {
+                    "type": "text",
+                    "style": "plain",
+                    "foreground": "#145adb",
+                    "template": "\u2554\u2563",
                     "properties": {
                         "cache_duration": "none"
-                    },
-                    "template": "\u2554\u2563",
-                    "foreground": "#145adb",
-                    "type": "text",
-                    "style": "plain"
+                    }
                 },
                 {
                     "type": "os",
@@ -26,31 +26,34 @@
                     }
                 },
                 {
+                    "type": "session",
+                    "style": "powerline",
+                    "foreground": "#dce8ff",
+                    "background": "#145adb",
+                    "template": "{{if .Root}} \uf0e7 {{else}} {{end}}",
                     "properties": {
                         "cache_duration": "none",
                         "display_host": false,
                         "style": "folder"
-                    },
-                    "template": "{{if .Root}} \uf0e7 {{else}} {{end}}",
-                    "foreground": "#dce8ff",
-                    "background": "#145adb",
-                    "type": "session",
-                    "style": "powerline"
+                    }
                 },
                 {
-                    "properties": {
-                        "cache_duration": "none"
-                    },
-                    "template": "{{ .CurrentDate | date .Format }} ",
-                    "foreground": "#dce8ff",
-                    "background": "#145adb",
                     "type": "time",
                     "style": "diamond",
-                    "trailing_diamond": "\ue0b0"
+                    "foreground": "#dce8ff",
+                    "background": "#145adb",
+                    "template": "{{ .CurrentDate | date .Format }} ",
+                    "trailing_diamond": "\ue0b0",
+                    "properties": {
+                        "cache_duration": "none"
+                    }
                 },
                 {
                     "type": "path",
                     "style": "diamond",
+                    "foreground": "#f8e3fd",
+                    "background": "#7f0f96",
+                    "template": " {{ .Path }} ",
                     "leading_diamond": "<transparent,#7f0f96>\ue0b0</>",
                     "trailing_diamond": "\ue0b0",
                     "properties": {
@@ -59,16 +62,16 @@
                         "folder_separator_icon": " \ue0bd ",
                         "style": "agnoster_short",
                         "home_icon": "\uf015"
-                    },
-                    "template": " {{ .Path }} ",
-                    "foreground": "#f8e3fd",
-                    "background": "#7f0f96"
+                    }
                 },
                 {
                     "type": "git",
                     "style": "diamond",
+                    "foreground": "#193549",
+                    "background": "#00d41c",
                     "leading_diamond": "<transparent,#00d41c>\ue0b0</>",
                     "trailing_diamond": "\ue0b0",
+                    "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
                     "properties": {
                         "cache_duration": "none",
                         "cherry_pick_icon": "✓ ",
@@ -78,10 +81,7 @@
                         "no_commits_icon": "[no commits]",
                         "rebase_icon": "\u2c62 ",
                         "tag_icon": "\u25b6 "
-                    },
-                    "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
-                    "foreground": "#193549",
-                    "background": "#00d41c"
+                    }
                 }
             ]
         },
@@ -90,26 +90,26 @@
             "type": "prompt",
             "segments": [
                 {
-                    "background": "#29315A",
-                    "foreground": "#43CCEA",
-                    "template": "  \uf2bd {{ .UserName }} \uf4a9 {{ .HostName }} ",
                     "type": "session",
                     "style": "diamond",
+                    "foreground": "#43CCEA",
+                    "background": "#29315A",
                     "leading_diamond": "\ue0b2",
-                    "trailing_diamond": "<transparent,#29315A>\ue0b2</>"
+                    "trailing_diamond": "<transparent,#29315A>\ue0b2</>",
+                    "template": " \uf2bd {{ .UserName }} \uf4a9 {{ .HostName }} "
                 },
                 {
+                    "type": "executiontime",
+                    "style": "diamond",
+                    "foreground": "#19be92",
+                    "background": "#0b5541",
+                    "leading_diamond": "\ue0b2",
+                    "trailing_diamond": "<transparent,#0b5541>\ue0b2</>",
+                    "template": " \uf520 {{ .FormattedMs }} ",
                     "properties": {
                         "always_enabled": true,
                         "cache_duration": "none"
-                    },
-                    "template": " \uf520 {{ .FormattedMs }} ",
-                    "foreground": "#19be92",
-                    "background": "#0b5541",
-                    "type": "executiontime",
-                    "style": "diamond",
-                    "leading_diamond": "\ue0b2",
-                    "trailing_diamond": "<transparent,#0b5541>\ue0b2</>"
+                    }
                 }
             ]
         },
@@ -118,13 +118,13 @@
             "type": "prompt",
             "segments": [
                 {
+                    "type": "text",
+                    "style": "plain",
+                    "foreground": "#145adb",
+                    "template": "\u255a\u2563\ue0b0",
                     "properties": {
                         "cache_duration": "none"
-                    },
-                    "template": "\u255a\u2563\ue0b0",
-                    "foreground": "#145adb",
-                    "type": "text",
-                    "style": "plain"
+                    }
                 }
             ],
             "newline": true
