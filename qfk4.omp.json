@@ -20,7 +20,7 @@
                     "style": "plain",
                     "foreground": "#dce8ff",
                     "background": "#145adb",
-                    "template": " {{ if eq .OS \"nobara\" }}\uf380{{ else if .WSL }}f31a{{ else }}{{.Icon}}{{ end }} "
+                    "template": " {{ if eq .OS \"nobara\" }}\uf380{{ else if .WSL }}\uf31a{{ else }}{{.Icon}}{{ end }} "
                 },
                 {
                     "type": "session",
