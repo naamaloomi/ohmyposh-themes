@@ -1,6 +1,10 @@
 # Oh My Posh
 
-https://ohmyposh.dev/
+Themes for [Oh My Posh](https://ohmyposh.dev/) prompt engine.
+
+# Font
+
+Works best with MesloLGM NF from [Nerd Fonts](https://www.nerdfonts.com/).
 
 # Sample screenshots
 
