@@ -1,0 +1,107 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "console_title_template": "{{if .Root}} ⚡ {{end}}♙{{.UserName}}  🖿 {{.Folder}}",
+    "blocks": [
+        {
+            "alignment": "left",
+            "type": "prompt",
+            "segments": [
+                {
+                    "type": "text",
+                    "style": "plain",
+                    "foreground": "#145adb",
+                    "template": "\u2554\u2563",
+                    "properties": {
+                        "cache_duration": "none"
+                    }
+                },
+                {
+                    "type": "os",
+                    "style": "plain",
+                    "foreground": "#dce8ff",
+                    "background": "#145adb",
+                    "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+                    "properties": {
+                        "linux": "\uf380"
+                    }
+                },
+                {
+                    "type": "session",
+                    "style": "powerline",
+                    "foreground": "#dce8ff",
+                    "background": "#145adb",
+                    "template": "{{if .Root}} \uf0e7 {{else}} {{end}}",
+                    "properties": {
+                        "cache_duration": "none",
+                        "display_host": false,
+                        "style": "folder"
+                    }
+                },
+                {
+                    "type": "time",
+                    "style": "diamond",
+                    "foreground": "#dce8ff",
+                    "background": "#145adb",
+                    "template": "{{ .CurrentDate | date .Format }} ",
+                    "trailing_diamond": "\ue0b0",
+                    "properties": {
+                        "cache_duration": "none"
+                    }
+                },
+                {
+                    "type": "path",
+                    "style": "diamond",
+                    "foreground": "#f8e3fd",
+                    "background": "#7f0f96",
+                    "template": " {{ .Path }} ",
+                    "leading_diamond": "<transparent,#7f0f96>\ue0b0</>",
+                    "trailing_diamond": "\ue0b0",
+                    "properties": {
+                        "cache_duration": "none",
+                        "folder_icon": "\uf115",
+                        "folder_separator_icon": " \ue0bd ",
+                        "style": "agnoster_short",
+                        "home_icon": "\uf015"
+                    }
+                },
+                {
+                    "type": "git",
+                    "style": "diamond",
+                    "foreground": "#193549",
+                    "background": "#00d41c",
+                    "leading_diamond": "<transparent,#00d41c>\ue0b0</>",
+                    "trailing_diamond": "\ue0b0",
+                    "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
+                    "properties": {
+                        "cache_duration": "none",
+                        "cherry_pick_icon": "✓ ",
+                        "commit_icon": "\u25b7 ",
+                        "fetch_status": true,
+                        "merge_icon": "\u25f4 ",
+                        "no_commits_icon": "[no commits]",
+                        "rebase_icon": "\u2c62 ",
+                        "tag_icon": "\u25b6 "
+                    }
+                }
+            ]
+        },
+        {
+            "alignment": "left",
+            "type": "prompt",
+            "segments": [
+                {
+                    "type": "text",
+                    "style": "plain",
+                    "foreground": "#145adb",
+                    "template": "\u255a\u2563\ue0b0",
+                    "properties": {
+                        "cache_duration": "none"
+                    }
+                }
+            ],
+            "newline": true
+        }
+    ],
+    "version": 3,
+    "final_space": true
+}
